@@ -1,4 +1,5 @@
-﻿using BotInterface.Bot;
+﻿using System.Linq;
+using BotInterface.Bot;
 using BotInterface.Game;
 
 namespace CleanDynamiteBot
@@ -13,6 +14,8 @@ namespace CleanDynamiteBot
         
         public Move MakeMove(Gamestate gamestate)
         {
+            LookAtLastRound(gamestate);
+            
             Move move = GetMove(gamestate);
 
             while (!IsValidMove(move))
@@ -29,11 +32,31 @@ namespace CleanDynamiteBot
             return move;
         }
 
+        public void LookAtLastRound(Gamestate gamestate)
+        {
+            if (gamestate.GetRounds().Length >= 1)
+            {
+                Move enemyPlay = gamestate.GetRounds().Last().GetP2();
+                if (enemyPlay == Move.D)
+                {
+                    EnemyDynamiteRemaining -= 1;
+                    RoundsSinceSeenEnemyDynamite = 0;
+                }
+                else
+                {
+                    RoundsSinceSeenEnemyDynamite += 1;
+                }
+            }
+        }
 
         public Move GetMove(Gamestate gamestate)
         {
             Move move;
-            //todo: Fixed decisions
+            if (gamestate.GetRounds().Length == 0)
+            {
+                return Move.D;
+            }
+            
             //todo: predicted response
             //todo: predicted patterns
 
