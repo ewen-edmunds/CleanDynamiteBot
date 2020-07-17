@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BotInterface.Game;
 
 namespace CleanDynamiteBot
@@ -56,6 +57,29 @@ namespace CleanDynamiteBot
             {
                 return Move.D;
             }
+            return GetRandomMove();
+        }
+
+        public static Move GetWeightedPickFrom(Dictionary<Move, int> dict)
+        {
+            Random rng = new Random();
+            
+            int sum = 0;
+            foreach (var pair in dict)
+            {
+                sum = sum + pair.Value;
+            }
+
+            int randomValue = rng.Next(sum);
+            foreach (var pair in dict)
+            {
+                randomValue -= pair.Value;
+                if (randomValue <= 0)
+                {
+                    return pair.Key;
+                }
+            }
+
             return GetRandomMove();
         }
     }

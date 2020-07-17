@@ -17,6 +17,20 @@ namespace CleanDynamiteBot
 
             while (!IsValidMove(move))
             {
+                //todo: Fixed decisions
+                //todo: What to do on a draw
+                //todo: predicted response
+                //todo: predicted patterns
+                
+                //Predicted play
+                if (gamestate.GetRounds().Length > 50)
+                {
+                    var dict = DictionaryLogic.GetResponsesToRounds(gamestate.GetRounds());
+                    Move predictedEnemyMove = MoveClass.GetWeightedPickFrom(dict);
+                    move = MoveClass.GetOppositeMove(predictedEnemyMove);
+                }
+                
+                //Random
                 move = MoveClass.GetRandomMove();
             }
             
