@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nVTkdpSAZKJvlBqI6s2znU+0WGHAtneXceLzaHHQiFc1fPVPmr6f8iROdZyNsOckCEkb+KLNakeZvBMLoP3vXg==",
+  "dgSpecHash": "Cdg3Agghr+RW0Y7hHi/5rJ2Z6cdQvyU4Fi6W3btWWvtXXrNNu7aBjYrgktZhmyvd2CWfoyQRpjOaOFiopceALQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj",
+  "projectFilePath": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\Bot02\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eweedm\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Users\\eweedm\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj": {}
+    "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\Bot02\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj": {
+    "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\Bot02\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj",
+        "projectUniqueName": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\Bot02\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj",
         "projectName": "CleanDynamiteBot",
-        "projectPath": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj",
+        "projectPath": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\Bot02\\CleanDynamiteBot\\CleanDynamiteBot\\CleanDynamiteBot.csproj",
         "packagesPath": "C:\\Users\\eweedm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\CleanDynamiteBot\\CleanDynamiteBot\\obj\\",
+        "outputPath": "C:\\Users\\eweedm\\OneDrive - Softwire\\Documents\\Work\\Training\\Bot02\\CleanDynamiteBot\\CleanDynamiteBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eweedm\\AppData\\Roaming\\NuGet\\NuGet.Config",

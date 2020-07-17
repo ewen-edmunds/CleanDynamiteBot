@@ -4,4 +4,10 @@
         <TargetFramework>netcoreapp2.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="BotInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Dynamite\BotInterface.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
