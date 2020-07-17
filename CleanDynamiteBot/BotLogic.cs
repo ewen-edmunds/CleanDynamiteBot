@@ -20,7 +20,6 @@ namespace CleanDynamiteBot
 
             while (!IsValidMove(move))
             {
-                //Random
                 move = MoveClass.GetRandomMove();
             }
             
@@ -57,7 +56,6 @@ namespace CleanDynamiteBot
                 return Move.D;
             }
             
-            //todo: predicted response
             //todo: predicted patterns
 
             if (DrawLogic.WasDrawLastRound(gamestate))
