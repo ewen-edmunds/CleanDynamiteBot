@@ -34,9 +34,13 @@ namespace CleanDynamiteBot
         {
             Move move;
             //todo: Fixed decisions
-            //todo: What to do on a draw
             //todo: predicted response
             //todo: predicted patterns
+
+            if (DrawLogic.WasDrawLastRound(gamestate))
+            {
+                return DrawLogic.GetMoveGivenDraw(gamestate);
+            }
                 
             //Predicted play
             if (gamestate.GetRounds().Length > 50)

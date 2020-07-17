@@ -5,8 +5,27 @@ namespace CleanDynamiteBot
 {
     public static class DrawLogic
     {
+        public static Move GetMoveGivenDraw(Gamestate gamestate)
+        {
+            int numberDraws = GetNumberOfDraws(gamestate);
+
+            var allResponses = DictionaryLogic.GetResponsesToConditionalRounds(gamestate.GetRounds(),
+                WasDrawOnRound);
+
+            
+
+            Move move = MoveClass.GetWeightedPickFrom(allResponses);
+            
+            return MoveClass.GetFinisherMove(move);
+        }
+        
         public static bool WasDrawLastRound(Gamestate gamestate)
         {
+            if (gamestate.GetRounds().Length < 2)
+            {
+                return false;
+            }
+            
             Round round = gamestate.GetRounds().Last();
             return round.GetP1() == round.GetP2();
         }

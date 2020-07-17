@@ -7,6 +7,7 @@ namespace CleanDynamiteBot
     public static class MoveClass
     {
         public const int RANDOM_DYNAMITE_WEIGHT = 6;
+        public const float SIGNIFICANCE_THRESHOLD = 0.55f;
         public static Move GetRandomMove()
         {
             Random rng = new Random();
@@ -81,6 +82,25 @@ namespace CleanDynamiteBot
             }
 
             return GetRandomMove();
+        }
+        
+        public static Move? GetSignificantPickFrom(Dictionary<Move, int> dict)
+        {
+            int sum = 0;
+            foreach (var pair in dict)
+            {
+                sum = sum + pair.Value;
+            }
+            
+            foreach (var pair in dict)
+            {
+                if (pair.Value >= sum * SIGNIFICANCE_THRESHOLD)
+                {
+                    return pair.Key;
+                }
+            }
+
+            return null;
         }
     }
 }
