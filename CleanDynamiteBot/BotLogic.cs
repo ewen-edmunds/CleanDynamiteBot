@@ -3,6 +3,7 @@ using BotInterface.Game;
 
 namespace CleanDynamiteBot
 {
+    //todo: rename classes to make sense
     public class BotLogic : IBot
     {
         public int MyDynamiteRemaining = 100;
