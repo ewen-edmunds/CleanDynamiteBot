@@ -8,13 +8,13 @@ namespace CleanDynamiteBot
         public int MyDynamiteRemaining = 100;
         public int EnemyDynamiteRemaining = 100;
         public int RoundsSinceSeenEnemyDynamite = 50;
+        public const int ROUNDS_TO_IGNORE_ENEMY_DYNAMITE_AFTER = 50;
         
         public Move MakeMove(Gamestate gamestate)
         {
             Move move = GetMove(gamestate);
 
-            while ((move == Move.D && MyDynamiteRemaining <= 0) ||
-                   (move == Move.W && (EnemyDynamiteRemaining <= 0 || RoundsSinceSeenEnemyDynamite >= 50)))
+            while (!IsValidMove(move))
             {
                 move = MoveClass.GetRandomMove();
             }
@@ -31,6 +31,12 @@ namespace CleanDynamiteBot
         public Move GetMove(Gamestate gamestate)
         {
             return MoveClass.GetRandomMove();
+        }
+
+        public bool IsValidMove(Move move)
+        {
+            return !((move == Move.D && MyDynamiteRemaining <= 0) ||
+                     (move == Move.W && (EnemyDynamiteRemaining <= 0 || RoundsSinceSeenEnemyDynamite >= ROUNDS_TO_IGNORE_ENEMY_DYNAMITE_AFTER)));
         }
     }
 }
