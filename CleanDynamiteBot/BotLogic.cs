@@ -55,6 +55,16 @@ namespace CleanDynamiteBot
             {
                 return Move.D;
             }
+
+            var myLastMove = gamestate.GetRounds().Last().GetP1();
+            var allResponses = DictionaryLogic.GetResponsesToConditionalRounds(gamestate.GetRounds(),
+                round => round.GetP1()==myLastMove);
+            
+            Move? sigMove = MoveClass.GetSignificantPickFrom(allResponses);
+            if (sigMove != null)
+            {
+                return MoveClass.GetOppositeMove((Move) sigMove);
+            }
             
             //todo: predicted patterns
 
